@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp"
+    android:layout_margin="@dimen/_10sdp"
+    android:padding="@dimen/_20sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/gradient_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/iv_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:contentDescription="@string/choice_image"
+            tools:src="@drawable/generate_bill" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            tools:text="Generate Bill" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

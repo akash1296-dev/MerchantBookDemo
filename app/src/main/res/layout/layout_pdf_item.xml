@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@drawable/rounded_search_bar"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_pdf_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight=".5"
+            android:autoSizeMaxTextSize="17sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="start"
+            android:text="S.No"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_pdf_item"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="2"
+            android:autoSizeMaxTextSize="17sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:text="Item Name"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/tv_pdf_index"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_pdf_price_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="17sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="start"
+            android:text="Price"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/tv_pdf_count"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_pdf_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".6"
+            android:autoSizeMaxTextSize="17sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="Quantity"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/tv_pdf_price"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_pdf_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="17sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="end"
+            android:text="Total"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.Report.SingleReport.SingleReportActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/card_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_rect"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_start_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/start_date"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_calendar" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_10sdp"
+                android:background="@android:color/darker_gray" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/end_date"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_calendar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_rect"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.2"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/colorPrimary"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:hint="@string/search_entries"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_search" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_filter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:background="@color/semiColorPrimary"
+                android:clickable="true"
+                android:drawableTint="@color/black"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/all"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_arrow_down" />
+
+            <FrameLayout
+                android:id="@+id/frame_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_search_bar"
+                android:backgroundTint="@color/white"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent_bg"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:focusedByDefault="true"
+                    android:hint="@string/search_item"
+                    android:singleLine="true" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/ic_close"
+                    app:rippleColor="@android:color/darker_gray" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/bg_rounded_btn_new"
+            android:padding="10dp"
+            android:text="@string/search"
+            android:textAllCaps="false"
+            android:textColor="@color/ColorPrimaryTextColor"
+            android:visibility="gone"
+            app:backgroundTint="@color/white"
+            app:icon="@drawable/ic_search"
+            app:iconGravity="textStart"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_to"
+            app:rippleColor="@color/colorTransparentBlack" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_single_item"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_sort"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/layout_single_report_item" />
+
+    <ImageView
+        android:id="@+id/iv_noData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/no_data"
+        android:src="@drawable/ic_no_data"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_sort" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

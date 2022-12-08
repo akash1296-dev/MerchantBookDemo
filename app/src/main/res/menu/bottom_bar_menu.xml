@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/bottom_bar_home"
+        android:title="Home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_supplier"
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@drawable/bottom_bar_vendor"
+        android:title="Vendor"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_new_bill"
+        android:enabled="true"
+        android:icon="@drawable/ic_new_invoice"
+        android:title="New Bill"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_stock"
+        android:enabled="true"
+        android:title="Stock"
+        android:icon="@drawable/bottom_bar_stock"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_sales"
+        android:enabled="true"
+        android:title="Transaction"
+        android:icon="@drawable/bottom_bar_transactions"
+        app:showAsAction="always"/>
+</menu>

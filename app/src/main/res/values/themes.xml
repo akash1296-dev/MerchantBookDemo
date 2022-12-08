@@ -1,0 +1,109 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BarcodeScanner" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
+        <item name="colorAccent">@color/gd_center</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.TransparentStatusBar" parent="AppTheme">
+
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="AppTheme">
+        <!--This line changes the color of text in Toolbar-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!--This line changes the color of icons in toolbar (back, overflow menu icons)-->
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+
+    <style name="ModalBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="background">@drawable/bg_rounded_bottom</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheet</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="bottomSheetDialogTheme">@style/ModalBottomSheetDialog</item>
+    </style>
+
+    <style name="textInputLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="hintTextColor">@android:color/darker_gray</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <declare-styleable name="SearchableSpinner">
+        <!-- View attributes -->
+        <attr name="reveal_view_background_color" format="color" />
+        <attr name="start_search_tint_color" format="color" />
+        <attr name="search_view_background_color" format="color" />
+        <attr name="search_view_text_color" format="color" />
+        <attr name="done_search_tint_color" format="color" />
+        <attr name="anim_duration" format="integer" />
+        <attr name="show_borders" format="boolean" />
+        <attr name="borders_size" format="dimension" />
+        <attr name="boarder_color" format="color" />
+        <attr name="spinner_expand_height" format="dimension" />
+        <attr name="keep_last_search" format="boolean" />
+        <attr name="reveal_empty_text" format="string" />
+        <attr name="search_hint_text" format="string" />
+        <attr name="no_items_found_text" format="string" />
+        <attr name="items_divider" format="reference" />
+        <attr name="divider_height" format="dimension" />
+        <attr name="font_name" format="string" />
+        <attr name="searchable" format="boolean" />
+        <attr name="spinner_border_color" format="color" />
+    </declare-styleable>
+
+    <style name="DialogStyle" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="ThemeOverlay.AppTheme.TextInputEditText.Outlined" parent="">
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/gd_center</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="buttonBarPositiveButtonStyle">@style/TextButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/TextButton</item>
+    </style>
+
+    <style name="TextButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/gd_center</item>
+        <item name="backgroundTint">@color/gd_center</item>
+    </style>
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="HorizontalChart">
+        <item name="chart_gridColorX">@color/gray400Dark</item>
+        <item name="chart_gridColorY">@color/gray400Dark</item>
+        <item name="chart_labelsXColor">@color/black</item>
+        <item name="chart_labelsYColor">@color/gray500</item>
+    </style>
+
+
+</resources>

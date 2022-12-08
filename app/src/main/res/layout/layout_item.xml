@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg"
+        android:padding="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_itemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/ColorSecondaryTextColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/ll_counter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+        <LinearLayout
+            android:id="@+id/ll_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rect"
+            android:backgroundTint="@color/white"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/sub_count"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/rounded_rect"
+                android:backgroundTint="@color/black"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_itemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textColor="@color/ColorPrimaryTextColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/add_count"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/rounded_rect"
+                android:backgroundTint="@color/black"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_itemPriceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Price:"
+            android:textColor="@color/ColorSecondaryTextColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_itemName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/ColorSecondaryTextColor"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tv_itemPriceTitle"
+            app:layout_constraintTop_toBottomOf="@id/tv_itemName"
+            tools:text="0" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_itemName"
+            app:tint="@color/ColorSecondaryTextColor" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_min_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/rounded_rect"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:padding="5dp"
+            android:text="Minimum Quantity Exceeded"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_delete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

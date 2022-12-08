@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardElevation="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/gradient_bg"
+        android:padding="@dimen/_10sdp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_single_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toStartOf="@id/tv_single_item_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_single_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@id/tv_single_item_count"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Item Name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_single_item_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/tv_single_item_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_single_item_name"
+            tools:text="Barcode Number" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_single_item_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toEndOf="@id/tv_single_item_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_single_item_barcode"
+            tools:text="$10000" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_single_item_paid_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="$10" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_single_item_due_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_single_item_name"
+            tools:text="$100" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

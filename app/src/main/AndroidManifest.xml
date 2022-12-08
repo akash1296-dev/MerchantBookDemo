@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wedoapps.barcodescanner">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"
+        tools:targetApi="q" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".Utils.BarcodeApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_phonepe_book_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_phonepe_book_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App.Starting">
+        <activity
+            android:name=".Ui.Report.BuyerReport.BuyerReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name=".Ui.Report.SingleReport.SingleReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name=".Ui.Vendor.VendorActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name=".Ui.Report.ReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name=".Ui.History.SingleHistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name=".Ui.History.HistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name=".Ui.Scanner.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name=".Ui.Stock.StockActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name="com.wedoapps.barcodescanner.Ui.PdfGenerate.PDFActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentStatusBar" />
+        <activity
+            android:name="com.wedoapps.barcodescanner.Ui.PdfGenerate.PdfViewerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentStatusBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".Ui.Cart.CartActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name=".Ui.onboarding.OnBoardingStepTwoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+
+        <activity android:name=".Ui.Choice.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BarcodeScanner"/>
+
+        <activity
+            android:name=".Ui.Users.UserListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BarcodeScanner" />
+        <activity
+            android:name=".Ui.onboarding.OnBoardingStepOneActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.App.Starting"
+            tools:replace="screenOrientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

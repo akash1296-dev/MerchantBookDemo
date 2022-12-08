@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2fff3">
+
+    <ImageView
+        android:id="@+id/ivToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/bold"
+        android:text="Today, 9th Dec' 22"
+        android:textColor="#101010"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/ivToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/ivToolbar" />
+
+    <View
+        android:id="@+id/sep"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="#d9d9d9"
+        app:layout_constraintStart_toStartOf="@+id/tvDate"
+        app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+    <ImageView
+        android:id="@+id/ivNetMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_tod_net_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep" />
+
+    <ImageView
+        android:id="@+id/ivNetIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_tod_net_income"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivNetMargin" />
+
+    <ImageView
+        android:id="@+id/ivGraph"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_graph"
+        app:layout_constraintEnd_toEndOf="@+id/ivNetIncome"
+        app:layout_constraintStart_toStartOf="@+id/ivNetMargin"
+        app:layout_constraintTop_toBottomOf="@+id/ivNetMargin" />
+
+    <ImageView
+        android:id="@+id/ivOutStaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_outstanding"
+        app:layout_constraintStart_toStartOf="@+id/ivNetMargin"
+        app:layout_constraintTop_toBottomOf="@+id/ivGraph" />
+
+    <ImageView
+        android:id="@+id/ivStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_stock_in_hand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivOutStaning" />
+
+    <ImageView
+        android:id="@+id/ivTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_tax"
+        app:layout_constraintStart_toStartOf="@+id/ivOutStaning"
+        app:layout_constraintTop_toBottomOf="@+id/ivOutStaning" />
+
+    <ImageView
+        android:id="@+id/ivExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_expenses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivStock" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAddItem"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_corner_rectangle_blue"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintTop_toBottomOf="@id/ivExpenses">
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            app:layout_constraintEnd_toEndOf="@+id/ivExpering"
+            app:layout_constraintTop_toTopOf="@+id/tvLblItems" />
+
+        <TextView
+            android:id="@+id/tvLblItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="24dp"
+            android:text="Items in Stock"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_add_item"
+            app:layout_constraintStart_toStartOf="@+id/tvLblItems"
+            app:layout_constraintTop_toBottomOf="@+id/tvLblItems" />
+
+        <ImageView
+            android:id="@+id/ivReorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/ic_reorder"
+            app:layout_constraintStart_toStartOf="@+id/tvLblItems"
+            app:layout_constraintTop_toBottomOf="@+id/ivAddItem" />
+
+        <ImageView
+            android:id="@+id/ivExpering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_expering"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivReorder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:theme="@style/Theme.MaterialComponents"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemTextColor="@color/bottom_nav_text_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_bar_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

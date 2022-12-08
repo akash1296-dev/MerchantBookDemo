@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/co_inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_bg"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vendor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Vendor Name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vendor_paid_price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/paid_amount"
+                android:textColor="@color/ColorSecondaryTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_vendor_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vendor_paid_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textColor="@color/ColorSecondaryTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_vendor_name"
+                tools:text="@string/Rs" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vendor_due_price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/due_amount"
+                android:textColor="@color/ColorSecondaryTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_vendor_paid_price_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vendor_due_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textColor="@color/ColorSecondaryTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_vendor_paid_price_title"
+                tools:text="@string/Rs" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vendor_total_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/total_amount"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_vendor_due_price_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_vendor_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_rounded_corner"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/ColorPrimaryTextColor"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tv_vendor_total_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_vendor_total_title"
+                tools:text="@string/Rs" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_payment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:contentDescription="@string/add_payment"
+            android:singleLine="true"
+            android:text="@string/add_payment"
+            android:textColor="@color/white"
+            app:backgroundTint="@android:color/holo_blue_light"
+            app:icon="@drawable/ic_money"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/editBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/co_inner" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/edit"
+            android:textColor="@color/ColorPrimaryTextColor"
+            android:visibility="gone"
+            app:icon="@drawable/ic_edit"
+            app:iconGravity="textStart"
+            app:iconTint="@color/ColorPrimaryTextColor"
+            app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
+            app:layout_constraintStart_toEndOf="@id/btn_add_payment"
+            app:layout_constraintTop_toBottomOf="@id/co_inner" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/gd_center"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:backgroundTint="@color/ColorSecondaryLight"
+            app:icon="@drawable/ic_delete"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/editBtn"
+            app:layout_constraintTop_toBottomOf="@id/co_inner" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
